@@ -15,6 +15,11 @@ public class NameInvalidException extends RuntimeException{
 	public String toString() {
 		return "NameInvalidException [msg=" + msg + "]";
 	}
+
+	@Override
+	public String getMessage() {
+		return this.msg;
+	}
 	
 	
 }

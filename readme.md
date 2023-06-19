@@ -92,5 +92,12 @@
         - 5 - they are are parallel execution / you can go with ordering / they support lambadas / less code more do 
     - TestNG
 
+    - afternoon session 
+        - write clear cases 
+        - handle exception 
+        - grouping test cases 
+        - given display name 
+        - order execution of test cases 
+        
 - Mockito (Practicles)
 
