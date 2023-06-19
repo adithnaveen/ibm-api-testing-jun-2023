@@ -98,6 +98,25 @@
         - grouping test cases 
         - given display name 
         - order execution of test cases 
-        
+
+```
+    interface MyInterface {
+        void doMyJob(); 
+    }
+
+    // way 1 
+    class DoBusiness implements MyInterface {
+       void doMyJob() {} 
+    }
+
+    // way 2 
+    class ItsPrashanthBusiness {
+        void myOwnMethod() {
+            MyInterface m =  () ->   // do your stuffs  ; 
+        }
+    }
+
+```
+
 - Mockito (Practicles)
 
