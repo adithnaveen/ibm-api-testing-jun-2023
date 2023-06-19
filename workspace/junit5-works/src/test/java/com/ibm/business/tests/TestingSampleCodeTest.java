@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Stream;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -17,6 +18,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.api.function.Executable;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import com.ibm.business.ITestingSampleCode;
 import com.ibm.business.NameInvalidException;
@@ -145,4 +149,52 @@ class TestingSampleCodeTest {
 		});
 	}
 
+	
+	// parameterization 
+	@ParameterizedTest
+	@ValueSource(strings = {"Swetha", "Sanmeet", "Ishita", "Bhawesh", "AliAsger"})
+	void checkForMultipleNamesValidCase(String name) {
+		assertTrue(tsc.checkName(name), "Invalid case for " + name);
+	}
+	
+	
+	// similar to parameterization - Method Source 
+	
+	static Stream<String> getNamesToCheck() {
+		return Stream.of("Lingaraj", "Hiranmai", "Aswini", "Zakhir");
+	}
+	
+	@ParameterizedTest
+	@MethodSource("getNamesToCheck")
+	void checkForMultipleNamesValidCaseStreamOfValues(String name) {
+		assertTrue(tsc.checkName(name), "Invalid case for " + name);
+	}
+	
+	
+	// assignment - TODO 
+	// 1. create a csv file 
+	// 2. in the CSV file have the names 
+	// 3. write the test cases 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
