@@ -119,4 +119,17 @@
 ```
 
 - Mockito (Practicles)
+    - BDD (Behaviour Driven Development)
+        - Given - Pre Condition 
+        - When - The actual 
+        - Then - Post Condition 
 
+        - And - Multiple condition 
+        - But - against condition 
+
+```
+    Employee e = new Employee(); 
+
+
+    Employee e = mock(Employee.class);
+```
