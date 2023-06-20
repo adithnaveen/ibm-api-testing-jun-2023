@@ -133,3 +133,38 @@
 
     Employee e = mock(Employee.class);
 ```
+
+
+```
+package junit5work;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+import java.util.List;
+import org.junit.jupiter.api.Test;
+
+import com.ibm.business.Hello;
+
+public class EmployeeListTest {
+    Hello h = new Hello(); 
+}
+
+```
+
+- in java what can be imported 
+    1.  you can import all the classes of the package with import com.ibm.* ; 
+    2. you can import a specific class from the package with import com.ibm.Hello; 
+    3. you can an option to do static import import static com.ibm.Hello.seeYou; 
+```
+package com.ibm.business; 
+
+    class Hello {
+        static void seeYou() {}
+    }
+
+    class Hi {
+
+    }
+```

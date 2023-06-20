@@ -1,6 +1,10 @@
 package com.ibm.business.tests;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTimeout;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -19,8 +23,10 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.api.function.Executable;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.platform.commons.util.StringUtils;
 
 import com.ibm.business.ITestingSampleCode;
 import com.ibm.business.NameInvalidException;
@@ -175,6 +181,16 @@ class TestingSampleCodeTest {
 	// 1. create a csv file 
 	// 2. in the CSV file have the names 
 	// 3. write the test cases 
+	
+	
+	@ParameterizedTest
+	@CsvFileSource(
+		files = "src/test/resources/names.csv", 
+		lineSeparator = "|",
+		numLinesToSkip = 1)
+	void checkForMultipleNamesValidCaseCSVValues(String name) {
+		assertTrue(tsc.checkName(name), "Invalid case for " + name);
+	}
 }
 
 
