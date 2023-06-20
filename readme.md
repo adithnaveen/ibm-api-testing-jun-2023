@@ -16,9 +16,9 @@
 
 - Download and install NodeJS(LTS) for your respective OS(Mac/Win/Linux) -  https://nodejs.org/en/download
 
-- download and install Postman 
+- download and install Postman - https://www.postman.com/downloads/
 
-- download and install mysql 
+- mongodb - https://www.mongodb.com/try/download/community
 ---
 
 # Introduction 
