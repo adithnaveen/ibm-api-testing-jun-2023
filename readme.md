@@ -176,3 +176,112 @@ package com.ibm.business;
 - when you have an interface,  when there are new methods bought in then the stub has to invariably changed 
 - and currently we are deveping and testing instead we should mock the data, such that when the interface changes no change to code / no breakage 
 
+
+```
+    @Mock
+	IMessageService messageService;  
+
+	@InjectMocks
+	MessageServiceImpl messageServiceImpl; 
+
+
+    - behind the screen is 
+
+    
+	IMessageService messageService = mock(ImessageSercie.class); 
+	MessageServiceImpl messageServiceImpl = new MessageServiceImpl(messageService); 
+```
+
+- What is 
+    - web serivce 
+        - accessed over internet 
+        - SOAP / JAXB 
+        - Its an arch (x)
+        - use HTTP 
+    - REST
+        - its an API 
+        - 
+    - RESTful 
+        - it is an application accessed via API's 
+
+    - XML 
+    - JSON 
+
+
+- Earyly 90's 
+    - any standards 
+        - Java  - 93 
+        - CGI - 80 
+        - CPP - 70 
+        - COBOL - 60 
+        - Python 
+
+    - Even WWW was not there (it started around 1991)
+    - EDI - Electronic Data Interchange (x25 standara / sita link / Com / DCom/ RMI, CORBA)
+    - transmit the data in Text -> 7-8 to figure out 
+    - in 1999 - WWW standardarize - XML - is the way how you describe the data
+    - SOAP / WSDL / SOA (For Contract) - WebService is the way to provide interface for communication / interact 
+    - 1999 - 2008 - web services were used heavily 
+    - w3c proposed - Xpath / XSD / XSLT / XSL / XML 
+    - in 2004  - Representational State  - ReST - API 
+    - for Rest you can use any kind of HTTP Server 
+    - the Rest take JSON / XML / RPC 
+    - HTTP 1.0 / HTTP 1.1 / HTTP2.0 
+    - HATEOS - Rest v/s RESTful
+```
+    <employees>
+        <employee>
+            <firstName salutation="Mr">Bhawesh</firstName>
+            <lastName>Hariom</lastName>
+            <address>
+                <hno>123</hno>
+                <street>Greewn View Blvd</street>
+                <city>Restcon</city>
+                <state>Virginia</state>
+                <country>USA</country>
+            </address>
+            <insurnace>
+                <dependencies>
+                    ... 
+                </dependencies>
+            </insurance>
+        </employee>
+
+          <employee>
+            <firstName salutation="Mr">Pranshan</firstName>
+            <lastName>Kumar</lastName>
+            <address>
+                <hno>223</hno>
+                <street>Greewn View Blvd</street>
+                <city>Restcon</city>
+                <state>Virginia</state>
+                <country onsite="yes">USA</country>
+            </address>
+            <insurnace>
+                <dependencies>
+                    ... 
+                </dependencies>
+            </insurance>
+        </employee>
+    </employees>
+
+     -- json 
+
+     {
+        "employees":[
+            "employee": {
+                "firstName":"Bhawesh", 
+                "lastName":"Hariom", 
+                "address": {
+                    "hno":123, 
+                    "street":"Green View Blvd", 
+                    "city":"Reston", 
+                    "state":"Virginia", 
+                    "country":"USA"
+                }
+            }, 
+            employee: {}
+
+        ]
+     }
+```

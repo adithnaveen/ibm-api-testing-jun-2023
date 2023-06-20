@@ -3,6 +3,7 @@ package com.ibm.api.tests;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -35,4 +36,26 @@ class MessageServiceTestMock02 {
 		
 	}
 
+	@Test
+	@DisplayName("to test empty list of messages valid case ")
+	void testEmptyList() {
+		List<String> list = new ArrayList<>();
+		
+		IMessageService messageSercieMock = mock(IMessageService.class);
+		when(messageSercieMock.getMessages("devi")).thenReturn(list); 
+		
+		MessageServiceImpl messageServiceImpl = new MessageServiceImpl(messageSercieMock);
+		
+		List<String> filteredList = messageServiceImpl.getMessagesFromUser("devi");
+		assertEquals(0, filteredList.size());
+	}
+	
 }
+
+
+
+
+
+
+
+
