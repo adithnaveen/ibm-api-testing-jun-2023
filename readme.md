@@ -135,6 +135,10 @@
 ```
 
 
+
+
+# Day 2 
+
 ```
 package junit5work;
 
@@ -168,3 +172,7 @@ package com.ibm.business;
 
     }
 ```
+
+- when you have an interface,  when there are new methods bought in then the stub has to invariably changed 
+- and currently we are deveping and testing instead we should mock the data, such that when the interface changes no change to code / no breakage 
+
