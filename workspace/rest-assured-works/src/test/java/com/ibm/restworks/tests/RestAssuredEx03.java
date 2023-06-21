@@ -52,7 +52,6 @@ class RestAssuredEx03 {
 	@Test
 	void testNestedPosts() {
 		
-		
 		JSONObject author = new JSONObject(); 
 		author.put("firstName", "Kumar");
 		author.put("lastName", "Naveen"); 
@@ -86,13 +85,5 @@ class RestAssuredEx03 {
 	void testToDeleteWithId() {
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }
