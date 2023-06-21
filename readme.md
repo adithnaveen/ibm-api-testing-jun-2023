@@ -305,5 +305,36 @@ package com.ibm.business;
     - PUT 
     - PATCH 
 
+### to test the controller various tools are available (API - Json/XML)
+- Postman
+- Rest Assured 
+- Cypress
+- HttpClient 
+- SoapUI 
+- Karate 
+- Cucumber 
+
+### install json-server  and working 
+    - npm i -g json-server 
+    - Create a db.json file with some data
+
+        ```{
+        "posts": [
+            { "id": 1, "title": "json-server", "author": "typicode" }
+        ],
+        "comments": [
+            { "id": 1, "body": "some comment", "postId": 1 }
+        ],
+        "profile": { "name": "typicode" }
+        }```
+
+- json-server --watch db.json
+
+- https://jsonplaceholder.typicode.com/posts
+- https://localhost:3000/posts
 
 
+- rest assured followd 
+    - Given 
+    - When 
+    - Then 
