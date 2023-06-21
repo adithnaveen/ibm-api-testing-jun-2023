@@ -357,3 +357,8 @@ package com.ibm.business;
             "lng": "81.1496"
       }
 ```
+
+- to create json from java 
+    - jackson 
+    - gson 
+    - json-simple 
