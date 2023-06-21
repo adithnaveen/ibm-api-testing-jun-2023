@@ -287,4 +287,23 @@ package com.ibm.business;
 ```
 
 
-- http://localhost:9090/
+- http://localhost:9090/ - spring boot application 
+
+
+
+# Day 3 
+
+- look for 
+    - CDN
+    - http 1.1 
+
+- http verbs 
+    - GET 
+    - POST 
+        - will take the body / payload 
+    - DELETE
+    - PUT 
+    - PATCH 
+
+
+
